@@ -56,4 +56,4 @@ Feel free to use and modify it, but no commercial use allowed.
 
 ---
 
-Made with ❤️ by sqaniya
+Made with ❤️ by saniya
