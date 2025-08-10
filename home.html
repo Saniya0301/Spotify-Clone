@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify Clone - Choose Mood</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .mood-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .mood-card {
+      background: #282828;
+      border-radius: 16px;
+      padding: 20px 30px;
+      width: 140px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 10px transparent;
+    }
+
+    .mood-card:hover,
+    .mood-card:focus {
+      background: #1db954;
+      transform: scale(1.05);
+      outline: none;
+      box-shadow: 0 0 10px #1db954;
+    }
+
+    .emoji {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .mood-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>What kind of music are you in the mood for?</h1>
+
+  <div class="mood-container" role="list">
+    <div class="mood-card" tabindex="0" role="listitem" aria-label="Lofi Chill Music">
+      <div class="emoji">🎧</div>
+      <div class="mood-text">Lofi Chill</div>
+    </div>
+    <div class="mood-card" tabindex="0" role="listitem" aria-label="Workout Music">
+      <div class="emoji">💪</div>
+      <div class="mood-text">Workout</div>
+    </div>
+    <div class="mood-card" tabindex="0" role="listitem" aria-label="Relax Music">
+      <div class="emoji">😌</div>
+      <div class="mood-text">Relax</div>
+    </div>
+    <div class="mood-card" tabindex="0" role="listitem" aria-label="Party Music">
+      <div class="emoji">🎉</div>
+      <div class="mood-text">Party</div>
+    </div>
+  </div>
+</body>
+</html>

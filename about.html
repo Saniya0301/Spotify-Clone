@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Spotify Clone</title>
+  <style>
+    body {
+      background: #121212;
+      color: #b3b3b3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #1db954;
+      font-weight: 700;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .pricing-table {
+      background: #282828;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .plan {
+      background: #181818;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #1db954;
+    }
+
+    .plan h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .plan p.price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #1db954;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 15px;
+    }
+
+    .plan ul li {
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      margin-top: 60px;
+      user-select: none;
+    }
+
+    a {
+      color: #1db954;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Spotify Clone</h1>
+  <p>
+    Spotify Clone is a project inspired by the popular music streaming platform, Spotify. It allows users to listen to their favorite songs, discover new music, create playlists, and enjoy personalized recommendations — all in a sleek and intuitive interface.
+  </p>
+  <p>
+    This clone is built with HTML, CSS, and JavaScript, designed to give you a feel of the Spotify experience. While it doesn’t provide actual streaming rights or music catalogs, it’s a great way to learn and explore web development and music app UI design.
+  </p>
+
+  <h2>Pricing Plans</h2>
+  <div class="pricing-table">
+    <div class="plan">
+      <h3>Free</h3>
+      <p class="price">₹0 / month</p>
+      <ul>
+        <li>Ad-supported listening</li>
+        <li>Shuffle play on mobile</li>
+        <li>Access to playlists & podcasts</li>
+        <li>Standard sound quality</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <p class="price">₹119 / month</p>
+      <ul>
+        <li>Ad-free music listening</li>
+        <li>Download songs and listen offline</li>
+        <li>Unlimited skips</li>
+        <li>High sound quality</li>
+        <li>Play any song, anytime</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Family</h3>
+      <p class="price">₹179 / month</p>
+      <ul>
+        <li>Up to 6 Premium accounts</li>
+        <li>Block explicit music for kids</li>
+        <li>Ad-free and offline listening</li>
+        <li>Family Mix playlist</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Student</h3>
+      <p class="price">₹59 / month</p>
+      <ul>
+        <li>Discounted Premium plan</li>
+        <li>Ad-free and offline listening</li>
+        <li>Play any song, anytime</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Spotify Clone. All rights reserved.
+  </footer>
+</body>
+</html>

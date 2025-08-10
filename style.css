@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-accent: #1db954;
+  --color-muted: #666666;
+  --border-radius: 12px;
+  --font-primary: 'Ubuntu', sans-serif;
+  --font-secondary: 'Varela Round', sans-serif;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+  --color-primary: #1db954;
+  --color-secondary: #191414;
+  --color-bg: #121212;
+  --color-text: #e0e0e0;
+  --color-muted: #bbbbbb;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  will-change: background-color, color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: var(--font-primary);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 65px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  margin: 0;
+  padding: 0 16px;
+}
+
+nav ul li {
+  padding: 0 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover,
+nav ul li:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.brand img {
+  width: 44px;
+  padding: 0 8px;
+  user-select: none;
+}
+
+.container {
+  min-height: 72vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+  display: flex;
+  margin: 23px auto;
+  width: 70%;
+  border-radius: var(--border-radius);
+  padding: 34px;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  will-change: background-color, color;
+}
+
+.bottom {
+  position: sticky;
+  bottom: 0;
+  height: 130px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icons {
+  margin-top: 14px;
+}
+
+.icons i {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  user-select: none;
+  will-change: color;
+}
+
+.icons i.playing {
+  animation: pulse 1.5s infinite;
+  color: var(--color-accent);
+}
+
+.icons i:hover,
+.icons i:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+#myProgressBar {
+  width: 80vw;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px; /* Center the thumb vertically */
+  transition: background-color 0.3s ease;
+}
+
+#myProgressBar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#myProgressBar:hover::-webkit-slider-thumb {
+  background-color: #14b347;
+}
+
+#myProgressBar:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+.songItemContainer {
+  margin-top: 74px;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar */
+.songItemContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.songItemContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.songItemContainer::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+.songItemContainer::-webkit-scrollbar-thumb:hover {
+  background: #14833b;
+}
+
+/* Song item uses grid for layout */
+.songItem {
+  display: grid;
+  grid-template-columns: 50px 1fr 100px 50px;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  margin: 12px 0;
+  border-radius: 34px;
+  padding: 0 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.songItem:hover,
+.songItem:focus {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  outline: none;
+  font-weight: 600;
+}
+
+.songItem img {
+  width: 43px;
+  border-radius: 34px;
+  user-select: none;
+  justify-self: center;
+}
+
+.songInfo {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.timestamp {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  text-align: right;
+  user-select: none;
+}
+
+.timestamp i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.timestamp i:hover,
+.timestamp i:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+/* Accessibility focus outline */
+.icons i:focus,
+nav ul li:focus,
+.songItem:focus,
+.timestamp i:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1100px) {
+  body {
+    background-color: var(--color-bg);
+  }
+  .container {
+    width: 90%;
+    flex-direction: column;
+    padding: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    height: auto;
+  }
+  nav ul li {
+    padding: 8px 0;
+  }
+  .songItem {
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+  }
+  .timestamp {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    text-align: left;
+    margin-top: 5px;
+  }
+  .bottom {
+    height: auto;
+    padding: 20px 10px;
+  }
+  #myProgressBar {
+    width: 100%;
+  }
+}
